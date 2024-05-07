@@ -1,4 +1,4 @@
-//read函数、print函数
+//read函数、print函数(234页)
 istream &read(istream &is,Saleas_data &item)//  
 {
   double price=0;
