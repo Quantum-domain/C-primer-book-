@@ -2,9 +2,18 @@
 #ifndef SALES_DATA_H
 #define SALES_DATA_H
 #include<string>
-struct Sales_data{
+struct Sales_data {
+//新成员：成员函数-对对象的操作。第230页写，如下
+std::string isbn() const {return bookNo;}
+Sales_data& combine(const Sales_data&);//常亮类引用
+double avg_price() const;
+//第64页写，如下
 std::string bookNo;
 unsigned units_sold=0;
 double revenue=0.0;
 };
+//Sales_data的非成员接口函数
+Sales_data add(const Sales_data&,const Sales_data&);
+std::ostream &print(std::ostream&,const Saleas_datas&);
+std::istream &read(std::istream&,Sales_data&);
 #endif
